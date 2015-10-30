@@ -299,8 +299,7 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
 }
 
 .contact {
-  vertical-align: middle;
-  width: 16.66667rem;
+  width: 15rem;
   height: 4.44444rem;
   margin-top: 2.38889rem;
   float: right;
@@ -314,7 +313,6 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   color: #c8c8c8;
   line-height: 1.05556rem;
   font-size: 0.83333rem;
-  margin-bottom: 0.55556rem;
 }
 .contact p {
   color: #000;
@@ -322,14 +320,24 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   margin: 0;
 }
 .contact div {
-  display: inline-block;
+  display: block;
+  float: left;
+}
+.contact:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .tel {
   height: 3.88889rem;
   width: 3.88889rem;
   margin-bottom: 0.27778rem;
-  display: inline-block;
+  display: block;
+  float: right;
 }
 
 .headerBottom .triangle {
@@ -538,6 +546,7 @@ footer {
   margin-left: 0;
   margin-right: 0;
   font-size: 0.66667rem;
+  margin-bottom: 3.22222rem;
 }
 footer:after {
   content: "\0020";
@@ -581,7 +590,7 @@ footer:after {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0.83333rem;
+  top: 0.61111rem;
   z-index: 0;
   background: #d7d9e6;
 }

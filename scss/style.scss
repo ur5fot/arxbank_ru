@@ -111,8 +111,7 @@
 }
 
 .contact {
-    vertical-align: middle;
-    width: 300 / $fz * 1rem;
+    width: 15rem;
     height: 80 / $fz * 1rem;
     margin-top: ( 43 / $fz) * 1rem;
     float: right;
@@ -125,7 +124,7 @@
         color: #c8c8c8;
         line-height: 19 / $fz * 1rem;
         font-size: 15 / $fz * 1rem;
-    margin-bottom: ( 10 / $fz) * 1rem;
+    // margin-bottom: ( 10 / $fz) * 1rem;
 
     }
     p {
@@ -135,16 +134,18 @@
         // margin-top: 15 / $fz * 1rem;
     }
     div {
-        display: inline-block;
+        display: block;
+        float: left;
     }
-    // @include cf;
+    @include cf;
 }
 
 .tel {
     height: 70 / $fz * 1rem;
     width: 70 / $fz * 1rem;
     margin-bottom: ((80 - 70) / $fz) / 2 * 1rem;
-    display: inline-block;
+    display: block;
+    float: right;
 }
 
 .headerBottom {
@@ -332,6 +333,7 @@ footer {
     @include span(15);
     @include cf;
      font-size: 12/ $fz  * 1rem;
+     margin-bottom: 58 / $fz * 1rem;
 }
 
 .preFooter {
@@ -364,7 +366,7 @@ footer {
     position: absolute;
     left: 0;
     right: 0;
-    top: 15 / $fz  * 1rem;
+    top: 11 / $fz  * 1rem;
     z-index: 0;
     background: #d7d9e6;
 
