@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    // overflow: hidden;
+}
+
+html {
+    font-size: $fz * 1px;
+}
+
+body {
+    color: #323232;
+    line-height: 1.5;
+    background: #fff;
+}
+
+h1 {
+    float: left;
+    display: block;
+    color: #dd1f26;
+    font-size: 36 / $fz * 1rem;
+}
+
+h2 {
+    margin-top: 45 / $fz * 1rem;
+    color: #253172;
+    font-size: 19 / $fz * 1rem;
+    padding-bottom: 18 / $fz * 1rem;
+    border-bottom: #e8e8e8 solid 1px;
+}
+
+h3 {
+    // padding-left: 16 / $fz * 1rem;
+    color: #323232;
+    font-size: 14 / $fz * 1rem;
+    position: relative;
+}
+
+ article p {
+    margin: (20 / $fz * 1rem) 0;
+}

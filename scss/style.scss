@@ -1,0 +1,429 @@
+@import "compass";
+@import "compass/reset";
+@import "susy";
+@import "lib/_mixin.scss";
+// @import "lib/_colors_variables.scss";
+@import "_var.scss";
+@import "_general.scss";
+@import "spr/*.png";
+@each $name in minus, minusRed, close, down, evro, insure, logoMin, point, search, tel, up, usd {
+    .#{$name} {
+        @include spr-sprite(#{$name});
+    }
+}
+
+.container {
+    @include container;
+    min-width: ($WContainer / $fz) * 1rem;
+}
+
+.headerTop, .headerBottom {
+    text-align: center;
+    a {
+        text-decoration: none;
+        display: block;
+    }
+}
+
+.headerTop, {
+    height: 50 / $fz *1rem;
+    line-height: 50 / $fz *1rem;
+    box-shadow: 0 1px (5 / $fz * 1rem) rgba(#000, .13);
+    color: #8d8d8d;
+    text-transform: uppercase;
+    a {
+        font-size: 17 / $fz * 1rem;
+        color: #8d8d8d;
+        @include hover-link;
+    }
+}
+
+.headerNav {
+    @include span(8);
+    li {
+        @include span( 1 of 5);
+        border-left: 1px solid #f8f8f8;
+        &:last-child {
+            border-right: 1px solid #f8f8f8;
+        }
+    }
+}
+
+.headerSubNav {
+    @include span(7);
+}
+
+.searchMain, .city {
+    @include span( 1 of 2);
+    border-right: 1px solid #f8f8f8;
+    // position: relative;
+    i {
+        // position: absolute;
+        display: inline-block;
+    }
+}
+
+.city {
+    font-size: 14 / $fz * 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    span {
+        font-size: 21 / $fz * 1rem;
+        color: #000;
+    }
+}
+
+.search {
+    height: 15 / $fz * 1rem;
+    width: 15 / $fz * 1rem;
+    margin-right: 10 / $fz * 1rem;
+}
+
+.triangle {
+    height: 0;
+    width: 0;
+    border: 6px transparent solid;
+    border-top-color: #000;
+    display: inline-block;
+    // display: block;
+}
+
+.city {
+    border-left: 1px solid #f8f8f8;
+    .triangle {
+        border-top-color: #000;
+        vertical-align: middle;
+        margin-left: 6 / $fz * 1rem;
+    }
+}
+
+.headerMiddle {
+    height: 140 / $fz * 1rem;
+    // width: ($WContainer  / $fz) * 1rem; 
+    figure {
+        @include span(7);
+        padding-top: ((135 - 104) / $fz) / 2 * 1rem;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.contact {
+    vertical-align: middle;
+    width: 300 / $fz * 1rem;
+    height: 80 / $fz * 1rem;
+    margin-top: ( 43 / $fz) * 1rem;
+    float: right;
+    text-align: right;
+    span, p {
+        display: block;
+        margin: 0;
+    }
+    span {
+        color: #c8c8c8;
+        line-height: 19 / $fz * 1rem;
+        font-size: 15 / $fz * 1rem;
+    margin-bottom: ( 10 / $fz) * 1rem;
+
+    }
+    p {
+        color: #000;
+        font-size: 25 / $fz * 1rem;
+        margin: 0;
+        // margin-top: 15 / $fz * 1rem;
+    }
+    div {
+        display: inline-block;
+    }
+    // @include cf;
+}
+
+.tel {
+    height: 70 / $fz * 1rem;
+    width: 70 / $fz * 1rem;
+    margin-bottom: ((80 - 70) / $fz) / 2 * 1rem;
+    display: inline-block;
+}
+
+.headerBottom {
+    .triangle {
+        border-top-color: #fff;
+        // margin: 20 / $fz * 1rem  20 / $fz * 1rem;
+        margin-bottom: -3 / $fz * 1rem;
+        margin-left: 13 / $fz * 1rem;
+        // margin-top: 5 / $fz * 1rem;
+    }
+    ul {
+        border-bottom: 4px solid #cc3333;
+        @include cf;
+    }
+    li {
+        @include span(3);
+        height: 54 / $fz * 1rem;
+        line-height: 54 / $fz * 1rem;
+        font-size: 20 / $fz * 1rem;
+        border-left: 1px solid #575e87;
+        &:last-child {
+            border-right: 1px solid #575e87;
+        }
+    }
+    a {
+        background: #28357a;
+        color: #fff;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, .75), 0 0 5px rgba(#fff, .16);
+        &:hover {
+            background: #ce1d23;
+            // background: #dd1f26;
+        }
+    }
+}
+
+.title {
+    @include cf;
+    height: 70 / $fz * 1rem;
+    line-height: 70 / $fz * 1rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.Breadcrumbs {
+    float: right;
+    font-size: 13 / $fz * 1rem;
+    text-transform: uppercase;
+    a {
+        @include hover-link;
+        color: #323232;
+        margin: 0 (10 / $fz * 1rem);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.sitebarLeft {
+    @include span(4);
+    menu {
+        padding-left: 28 / $fz * 1rem;
+        padding-top: 26 / $fz * 1rem;
+    }
+    ul {
+        padding-left: 20 / $fz * 1rem;
+        font-size: 13 / $fz * 1rem;
+        line-height: 23 / $fz * 1rem;
+    }
+    li {
+        position: relative;
+    }
+    a {
+        @include hover-link;
+        color: #323232;
+    }
+}
+
+.minus {
+    display: inline-block;
+    position: absolute;
+    left: - 20 / $fz * 1rem;
+    top: 23 / 2 / $fz * 1rem;
+    height: 1px;
+    width: 8 / $fz * 1rem;
+}
+
+.active {
+    a {
+        color: #000;
+    }
+    .minus {
+        @extend .minusRed;
+    }
+}
+
+.point {
+    height: 6 / $fz * 1rem;
+    width: 6 / $fz * 1rem;
+    display: inline-block;
+    position: absolute;
+    left: (-7 + -6) / $fz * 1rem;
+    top: 3 / $fz * 1rem;
+}
+
+.currency {
+    text-transform: uppercase;
+    margin-top: 57 / $fz * 1rem;
+    @include cf;
+    p {
+        font-size: 16 / $fz * 1rem;
+        color: #333366;
+        margin: 0;
+    }
+    span {
+        font-size: 11 / $fz * 1rem;
+        color: #9b9b9b;
+    }
+    table {
+        margin-top: 20 / $fz * 1rem;
+        font-size: 22/ $fz * 1rem;
+        color: #323232;
+        text-align: right;
+    }
+    th, td {
+        position: relative;
+        margin-bottom: 10 / $fz * 1rem;
+        padding-right: 20 / $fz * 1rem;
+        padding-left: 25 / $fz * 1rem;
+    }
+    td:first-child {
+        width: 125 / $fz * 1rem;
+        text-align: left;
+        padding-left: 49 / $fz * 1rem;
+    }
+    td {
+        text-align: center;
+    }
+    th {
+        font-size: 11 / $fz * 1rem;
+        line-height: 26 / $fz * 1rem;
+        color: #969696;
+        width: 73 / $fz * 1rem;
+    }
+}
+
+.usd, .evro {
+    position: absolute;
+    display: inline-block;
+    height: 18 / $fz * 1rem;
+    width: 27 / $fz * 1rem;
+    left: 0;
+    bottom: 9 / $fz * 1rem;
+}
+
+.down, .up {
+    position: absolute;
+    display: inline-block;
+    height: 9 / $fz * 1rem;
+    width: 13 / $fz * 1rem;
+    right: 0;
+    bottom: 10 / $fz * 1rem;
+}
+
+.lineBlue {
+    height: 2px;
+    background: #333366;
+    $lb: (180 / $fz * 1rem);
+    width: calc(100% - 10rem);
+    margin-top: -10 / $fz * 1rem;
+    float: right;
+}
+
+article {
+    @include span(11);
+    padding-top: 30 / $fz * 1rem;
+    padding-left: 49 / 860 * 100%;
+    padding-bottom: 136 / $fz * 1rem;
+}
+
+.important {
+    font-size: 22 / $fz * 1rem;
+    line-height: (22*1.5) / $fz * 1rem;
+}
+
+footer {
+    @include span(15);
+    @include cf;
+     font-size: 12/ $fz  * 1rem;
+}
+
+.preFooter {
+    text-align: center; 
+    position: relative;
+    margin-bottom: 43 / $fz * 1rem;
+    a {
+        display: inline-block;
+        @include hover-link;
+        color: #1c1c1c;
+        font-size: 15 / $fz * 1rem;
+        margin-left: 25 / $fz * 1rem;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+}
+
+.above {
+    display: table;
+    margin: 0 auto;
+    background: #fff;
+    z-index: 2;
+    position: relative;
+}
+
+.line{
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15 / $fz  * 1rem;
+    z-index: 0;
+    background: #d7d9e6;
+
+}
+
+.middleFooter1 {
+    @include span(4);
+    p{
+        color: #28357a;
+        font-size: 14 / $fz  * 1rem;
+    }
+    span{
+        color:#8c8c8c;
+       
+        line-height: 16/ $fz  * 1rem;
+    }
+}
+
+.middleFooter2{
+    @include span(4);
+    padding-left: 53 / $WContainer * 100%;
+}
+
+.logoMin{
+    height: 26 / $fz  * 1rem;
+    width: 136 / $fz  * 1rem;
+}
+
+.middleFooter3{
+    @include span(7 last);
+    color: #28357a;
+    text-transform: uppercase;
+}
+.bottomFooter1{
+    @include span(4 before);
+    clear: left;
+    margin-top: 22 /  $fz  * 1rem;
+}
+.bottomFooter2{
+    @extend .middleFooter2;
+    margin-top: 30 /  $fz  * 1rem;
+}
+.insure{
+    height: 30px ;
+    width: 194px ;
+
+}
+
+.bottomFooter3{
+    margin-top: 30 /  $fz  * 1rem;
+    @include span(3);
+    span{
+        color: #28357a;
+        text-decoration: underline;
+    }
+
+}
+.bottomFooter4{
+    @extend .bottomFooter3;
+    @include span(4 last);
+
+}
