@@ -260,6 +260,10 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   font-size: 1.16667rem;
   color: #000;
 }
+.city p {
+  display: inline-block;
+  line-height: 0.77778rem;
+}
 
 .search {
   height: 0.83333rem;

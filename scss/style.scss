@@ -70,6 +70,10 @@
         font-size: 21 / $fz * 1rem;
         color: #000;
     }
+    p{
+        display: inline-block;
+        line-height: 14 / $fz * 1rem;
+    }
 }
 
 .search {
