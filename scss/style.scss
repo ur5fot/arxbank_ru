@@ -65,14 +65,19 @@
 
 .city {
     font-size: 14 / $fz * 1rem;
-    font-family: 'Times New Roman', Times, serif;
+    // font-family: 'Times New Roman', Times, serif;
+    @include cf;
+    p {
+        display: block;
+        // line-height: 14 / $fz * 1rem;
+        float: left;
+        // margin-top: 18 /  $fz * 1rem;
+    }
     span {
+        display: block;
         font-size: 21 / $fz * 1rem;
         color: #000;
-    }
-    p {
-        display: inline-block;
-        line-height: 14 / $fz * 1rem;
+        font-family: 'futuraNewDemi Req';
     }
 }
 
@@ -120,6 +125,7 @@
     margin-top: ( 43 / $fz) * 1rem;
     float: right;
     text-align: right;
+    font-family: 'futuraNewDemi Req';
     span, p {
         display: block;
         margin: 0;
@@ -151,7 +157,10 @@
     float: right;
 }
 
-.headerBottom {
+.menuHeaderBottom {
+    border-bottom: 4px solid #cc3333;
+    font-family: 'futuraNewDemi Req';
+    @include cf;
     .triangle {
         border-top-color: #fff;
         // margin: 20 / $fz * 1rem  20 / $fz * 1rem;
@@ -159,15 +168,12 @@
         margin-left: 13 / $fz * 1rem;
         // margin-top: 5 / $fz * 1rem;
     }
-    ul {
-        border-bottom: 4px solid #cc3333;
-        @include cf;
-    }
     li {
         @include span(3);
         height: 54 / $fz * 1rem;
         line-height: 54 / $fz * 1rem;
         font-size: 20 / $fz * 1rem;
+        position: relative;
         border-left: 1px solid #575e87;
         &:last-child {
             border-right: 1px solid #575e87;
@@ -180,6 +186,39 @@
         &:hover {
             background: #ce1d23;
             // background: #dd1f26;
+        }
+    }
+    .subHeaderBottom {
+        top: 54 / $fz * 1rem;
+        right: 0;
+        left: 0;
+        position: absolute;
+        border-bottom: none;
+        width: 100%;
+        font-family: 'futuraNewMedium Req';
+        li {
+            // height: 54 / $fz * 1rem;
+            height: auto;
+            line-height: 14 / $fz * 1rem;
+            font-size: 14 / $fz * 1rem;
+            border-bottom: 1px solid #575e87;
+            clear: left;
+            display: block;
+            width: 100%;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        a {
+            background: #28357a;
+            color: #fff;
+            text-align: left;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, .75), 0 0 5px rgba(#fff, .16);
+            padding: (15 / $fz * 1rem) (25 / $fz * 1rem);
+            &:hover {
+                background: #ce1d23;
+                // background: #dd1f26;
+            }
         }
     }
 }
@@ -215,6 +254,7 @@
         padding-left: 20 / $fz * 1rem;
         font-size: 13 / $fz * 1rem;
         line-height: 23 / $fz * 1rem;
+        font-family: 'futuraNewBook Req';
     }
     li {
         position: relative;
@@ -260,10 +300,12 @@
         font-size: 16 / $fz * 1rem;
         color: #333366;
         margin: 0;
+        font-family: 'futuraNewBook Req';
     }
     span {
         font-size: 11 / $fz * 1rem;
         color: #9b9b9b;
+        font-family: 'futuraNewBook Req';
     }
     table {
         margin-top: 20 / $fz * 1rem;
@@ -315,7 +357,7 @@
     height: 2px;
     background: #333366;
     $lb: (180 / $fz * 1rem);
-    width: calc(100% - 10rem);
+    width: calc(100% - 8.7rem);
     margin-top: -10 / $fz * 1rem;
     float: right;
 }
@@ -332,12 +374,14 @@ footer {
     @include cf;
     font-size: 12/ $fz * 1rem;
     margin-bottom: 58 / $fz * 1rem;
+    font-family: 'futuraNewBold Req';
 }
 
 .preFooter {
     text-align: center;
     position: relative;
     margin-bottom: 43 / $fz * 1rem;
+    font-family: 'futuraNewLiqht Req';
     a {
         display: inline-block;
         @include hover-link;
@@ -395,12 +439,19 @@ footer {
     @include span(7 last);
     color: #28357a;
     text-transform: uppercase;
+    font-family: 'futuraNewLiqht Req';
 }
 
 .bottomFooter1 {
     @include span(4 before);
     clear: left;
     margin-top: 22 / $fz * 1rem;
+    a{
+        color: #262262;
+    }
+    address{
+        display: inline-block;
+    }
 }
 
 .bottomFooter2 {
@@ -430,16 +481,17 @@ footer {
 //  ark_template_arend.psd
 .important {
     font-size: 22 / $fz * 1rem;
-    line-height: (22*1.5) / $fz * 1rem;
+    // line-height: (22*1.5) / $fz * 1rem;
+    font-family: 'futuraNewDemi Req';
 }
 
 .tabs {
-    
     .tabsTitle {
         li {
             font-size: 23 / $fz * 1rem;
             display: inline-block;
             padding-right: 28 / $fz * 1rem;
+            font-family: 'futuraNewDemi Req';
             &:last-child {
                 padding-right: 0;
             }
@@ -447,9 +499,9 @@ footer {
     }
 }
 
-.tabs_container{
-    a{
-        font-size:  15 / $fz * 1rem;
+.tabs_container {
+    a {
+        font-size: 15 / $fz * 1rem;
     }
 }
 
@@ -458,3 +510,6 @@ footer {
         color: #dd1f26;
     }
 }
+
+// ark_template_dohodni_vl.
+// 881 320 20 541

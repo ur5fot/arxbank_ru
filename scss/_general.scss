@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'futuraNewDemi Req'; 
+    src: url('../fonts/FuturaNewDemi.otf'); 
+   }
+@font-face {
+    font-family: 'futuraNewLiqht Req'; 
+    src: url('../fonts/FuturaNewLight.otf'); 
+   }
+@font-face {
+    font-family: 'futuraNewBold Req'; 
+    src: url('../fonts/FuturaNewBold.otf'); 
+   }
+@font-face {
+    font-family: 'futuraNewMedium Req'; 
+    src: url('../fonts/FuturaNewMedium.otf'); 
+   }
+@font-face {
+    font-family: 'futuraNewBook Req'; 
+    src: url('../fonts/FuturaNewBook.otf'); 
+   }
+
 * {
     box-sizing: border-box;
     // overflow: hidden;
@@ -9,8 +30,9 @@ html {
 
 body {
     color: #323232;
-    line-height: 1.5;
+    line-height:  1.3 ;
     background: #fff;
+     font-family: 'futuraNewLiqht Req'; 
 }
 
 h1 {
@@ -18,6 +40,7 @@ h1 {
     display: block;
     color: #dd1f26;
     font-size: 36 / $fz * 1rem;
+    font-family: 'futuraNewDemi Req'; 
 }
 
 h2 {
@@ -28,11 +51,12 @@ h2 {
     border-bottom: #e8e8e8 solid 1px;
 }
 
-h3 {
-    // padding-left: 16 / $fz * 1rem;
+.sitebarLeft h3 {
     color: #323232;
     font-size: 14 / $fz * 1rem;
     position: relative;
+    font-family: 'futuraNewDemi Req'; /* Имя шрифта */
+
 }
 
  article p {
@@ -43,3 +67,5 @@ article a {
 	color: #323232;
 	@include hover-link;
 }
+
+   
