@@ -36,5 +36,10 @@ h3 {
 }
 
  article p {
-    margin: (20 / $fz * 1rem) 0;
+    margin: (20 / $fz * 1rem)  0;
+}
+
+article a {
+	color: #323232;
+	@include hover-link;
 }

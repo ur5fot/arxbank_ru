@@ -93,7 +93,15 @@ article p {
   margin: 1.11111rem 0;
 }
 
-.spr-sprite, .minus, .minusRed, .active .minus, .close, .down, .evro, .insure, .logoMin, .point, .search, .tel, .up, .usd {
+article a {
+  color: #323232;
+  text-decoration: none;
+}
+article a:hover, article a:focus {
+  text-decoration: underline;
+}
+
+.spr-sprite, .minus, .minusRed, .activeSitebarLeft .minus, .close, .down, .evro, .insure, .logoMin, .point, .search, .tel, .up, .usd {
   background-image: url('../img/spr-s31ec202de4.png');
   background-repeat: no-repeat;
 }
@@ -102,7 +110,7 @@ article p {
   background-position: 0 -96px;
 }
 
-.minusRed, .active .minus {
+.minusRed, .activeSitebarLeft .minus {
   background-position: 0 -97px;
 }
 
@@ -444,7 +452,7 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   width: 0.44444rem;
 }
 
-.active a {
+.activeSitebarLeft a {
   color: #000;
 }
 
@@ -537,11 +545,6 @@ article {
   padding-top: 1.66667rem;
   padding-left: 5.69767%;
   padding-bottom: 7.55556rem;
-}
-
-.important {
-  font-size: 1.22222rem;
-  line-height: 1.83333rem;
 }
 
 footer {
@@ -661,4 +664,26 @@ footer:after {
   width: 26.66667%;
   float: right;
   margin-right: 0;
+}
+
+.important {
+  font-size: 1.22222rem;
+  line-height: 1.83333rem;
+}
+
+.tabs .tabsTitle li {
+  font-size: 1.27778rem;
+  display: inline-block;
+  padding-right: 1.55556rem;
+}
+.tabs .tabsTitle li:last-child {
+  padding-right: 0;
+}
+
+.tabs_container a {
+  font-size: 0.83333rem;
+}
+
+.activeTabs a {
+  color: #dd1f26;
 }

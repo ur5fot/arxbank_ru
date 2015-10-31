@@ -70,7 +70,7 @@
         font-size: 21 / $fz * 1rem;
         color: #000;
     }
-    p{
+    p {
         display: inline-block;
         line-height: 14 / $fz * 1rem;
     }
@@ -128,8 +128,7 @@
         color: #c8c8c8;
         line-height: 19 / $fz * 1rem;
         font-size: 15 / $fz * 1rem;
-    // margin-bottom: ( 10 / $fz) * 1rem;
-
+        // margin-bottom: ( 10 / $fz) * 1rem;
     }
     p {
         color: #000;
@@ -235,7 +234,7 @@
     width: 8 / $fz * 1rem;
 }
 
-.active {
+.activeSitebarLeft {
     a {
         color: #000;
     }
@@ -328,20 +327,15 @@ article {
     padding-bottom: 136 / $fz * 1rem;
 }
 
-.important {
-    font-size: 22 / $fz * 1rem;
-    line-height: (22*1.5) / $fz * 1rem;
-}
-
 footer {
     @include span(15);
     @include cf;
-     font-size: 12/ $fz  * 1rem;
-     margin-bottom: 58 / $fz * 1rem;
+    font-size: 12/ $fz * 1rem;
+    margin-bottom: 58 / $fz * 1rem;
 }
 
 .preFooter {
-    text-align: center; 
+    text-align: center;
     position: relative;
     margin-bottom: 43 / $fz * 1rem;
     a {
@@ -350,7 +344,7 @@ footer {
         color: #1c1c1c;
         font-size: 15 / $fz * 1rem;
         margin-left: 25 / $fz * 1rem;
-        &:first-child{
+        &:first-child {
             margin-left: 0;
         }
     }
@@ -364,72 +358,103 @@ footer {
     position: relative;
 }
 
-.line{
+.line {
     height: 1px;
     width: 100%;
     position: absolute;
     left: 0;
     right: 0;
-    top: 11 / $fz  * 1rem;
+    top: 11 / $fz * 1rem;
     z-index: 0;
     background: #d7d9e6;
-
 }
 
 .middleFooter1 {
     @include span(4);
-    p{
+    p {
         color: #28357a;
-        font-size: 14 / $fz  * 1rem;
+        font-size: 14 / $fz * 1rem;
     }
-    span{
-        color:#8c8c8c;
-       
-        line-height: 16/ $fz  * 1rem;
+    span {
+        color: #8c8c8c;
+        line-height: 16/ $fz * 1rem;
     }
 }
 
-.middleFooter2{
+.middleFooter2 {
     @include span(4);
     padding-left: 53 / $WContainer * 100%;
 }
 
-.logoMin{
-    height: 26 / $fz  * 1rem;
-    width: 136 / $fz  * 1rem;
+.logoMin {
+    height: 26 / $fz * 1rem;
+    width: 136 / $fz * 1rem;
 }
 
-.middleFooter3{
+.middleFooter3 {
     @include span(7 last);
     color: #28357a;
     text-transform: uppercase;
 }
-.bottomFooter1{
+
+.bottomFooter1 {
     @include span(4 before);
     clear: left;
-    margin-top: 22 /  $fz  * 1rem;
+    margin-top: 22 / $fz * 1rem;
 }
-.bottomFooter2{
+
+.bottomFooter2 {
     @extend .middleFooter2;
-    margin-top: 30 /  $fz  * 1rem;
-}
-.insure{
-    height: 30px ;
-    width: 194px ;
-
+    margin-top: 30 / $fz * 1rem;
 }
 
-.bottomFooter3{
-    margin-top: 30 /  $fz  * 1rem;
+.insure {
+    height: 30px;
+    width: 194px;
+}
+
+.bottomFooter3 {
+    margin-top: 30 / $fz * 1rem;
     @include span(3);
-    span{
+    span {
         color: #28357a;
         text-decoration: underline;
     }
-
 }
-.bottomFooter4{
+
+.bottomFooter4 {
     @extend .bottomFooter3;
     @include span(4 last);
+}
 
+//  ark_template_arend.psd
+.important {
+    font-size: 22 / $fz * 1rem;
+    line-height: (22*1.5) / $fz * 1rem;
+}
+
+.tabs {
+    
+    .tabsTitle {
+        li {
+            font-size: 23 / $fz * 1rem;
+            display: inline-block;
+            padding-right: 28 / $fz * 1rem;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.tabs_container{
+    a{
+        font-size:  15 / $fz * 1rem;
+    }
+}
+
+.activeTabs {
+    a {
+        color: #dd1f26;
+    }
 }
