@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -99,35 +98,11 @@ h1 {
   font-family: 'futuraNewDemi Req';
 }
 
-h2 {
-  color: #253172;
-  font-size: 1.05556rem;
-  margin-top: 1.94444rem;
-  padding-bottom: 0.83333rem;
-  border-bottom: #e8e8e8 solid 1px;
-}
-
 .sitebarLeft h3 {
   color: #323232;
   font-size: 0.77778rem;
   position: relative;
   font-family: 'futuraNewDemi Req';
-  /* Имя шрифта */
-}
-
-h3 {
-  font-size: 1.27778rem;
-  margin-top: 1.94444rem;
-  padding-bottom: 0.83333rem;
-  border-bottom: #e8e8e8 solid 1px;
-  font-family: 'futuraNewDemi Req';
-  /* Имя шрифта */
-}
-
-h4 {
-  font-size: 1.27778rem;
-  line-height: 1.27778rem;
-  margin: 1.11111rem 0;
 }
 
 a {
@@ -151,13 +126,30 @@ article ul {
   margin-top: -0.55556rem;
 }
 article p {
-  margin: 1.11111rem 0;
+  margin-bottom: 1.11111rem;
 }
 article span {
   color: #323232;
   font-size: 1rem;
   line-height: 1.3;
   font-family: 'futuraNewDemi Req';
+}
+article h2 {
+  color: #253172;
+  font-size: 1.05556rem;
+  line-height: 1.05556rem;
+  margin-bottom: 0.38889rem;
+}
+article h3 {
+  font-size: 1.27778rem;
+  line-height: 1.27778rem;
+  margin-bottom: 0.38889rem;
+  font-family: 'futuraNewDemi Req';
+}
+article h4 {
+  font-size: 1.27778rem;
+  line-height: 1.27778rem;
+  margin: 1.11111rem 0;
 }
 
 aside {
@@ -576,6 +568,9 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   text-transform: uppercase;
   margin-top: 3.16667rem;
 }
+.currency:first-child {
+  margin-top: 1.38889rem;
+}
 .currency:after {
   content: "\0020";
   display: block;
@@ -654,6 +649,14 @@ article {
   padding-top: 1.16667rem;
   padding-left: 5.69767%;
   padding-bottom: 4.44444rem;
+}
+article:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 footer {
@@ -788,6 +791,9 @@ footer:after {
   font-size: 1.22222rem;
   font-family: 'futuraNewDemi Req';
 }
+.important:first-child {
+  margin-top: 0;
+}
 
 .tabs {
   margin-top: 1.83333rem;
@@ -914,4 +920,73 @@ footer:after {
   background: #e8e8e8;
   height: 1px;
   margin: 1.11111rem 0;
+  clear: both;
+}
+
+.newsDate {
+  clear: right;
+  width: 11.39394%;
+  float: left;
+  margin-bottom: 0.83333rem;
+}
+
+.newText {
+  float: right;
+  width: 88.48485%;
+  margin-bottom: 0.83333rem;
+}
+.newText:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.newText img {
+  float: left;
+  margin-right: 0.88889rem;
+  margin-bottom: 0.88889rem;
+}
+.newText a {
+  color: #28357a;
+  font-family: 'futuraNewBook Req';
+  text-decoration: underline;
+}
+.newText a:hover {
+  text-decoration: none;
+}
+
+.red {
+  color: #dd1f26;
+}
+
+.blue {
+  color: #28357a;
+}
+
+.showNews {
+  text-align: center;
+  position: relative;
+  clear: both;
+}
+.showNews a {
+  color: #28357a;
+  font-family: 'futuraNewDemi Req';
+  background: #fff;
+  position: relative;
+  z-index: 3;
+  padding: 0 1.11111rem;
+  text-decoration: underline;
+}
+.showNews a:hover {
+  text-decoration: none;
+}
+.showNews .lineGray {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.72222rem;
+  margin: 0;
+  z-index: 2;
 }

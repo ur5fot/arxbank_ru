@@ -295,6 +295,9 @@
 .currency {
     text-transform: uppercase;
     margin-top: 57 / $fz * 1rem;
+    &:first-child {
+        margin-top: 25 / $fz * 1rem;
+    }
     @include cf;
     p {
         font-size: 16 / $fz * 1rem;
@@ -367,6 +370,7 @@ article {
     padding-top: 21 / $fz * 1rem;
     padding-left: 49 / 860 * 100%;
     padding-bottom: 80 / $fz * 1rem;
+    @include cf;
 }
 
 footer {
@@ -483,6 +487,9 @@ footer {
     font-size: 22 / $fz * 1rem;
     // line-height: (22*1.5) / $fz * 1rem;
     font-family: 'futuraNewDemi Req';
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .tabs {
@@ -607,9 +614,76 @@ footer {
     color: #232f6c;
 }
 
-// 
-.lineGray{
+.lineGray {
     background: #e8e8e8;
     height: 1px;
     margin: (20 / $fz * 1rem) 0;
+    clear: both;
+}
+
+// news
+// 825 95
+.newsDate {
+    clear: right;
+    width: 94 / 825 *100%;
+    float: left;
+    margin-bottom: (15 / $fz * 1rem);
+    // margin-top: 0;
+}
+
+.newText {
+    float: right;
+    width: 100 - (95 / 825 *100%);
+    margin-bottom: (15 / $fz * 1rem);
+    // margin-top: 0;
+    @include cf;
+    img {
+        float: left;
+        margin-right: (16 / $fz * 1rem);
+        margin-bottom: (16 / $fz * 1rem);
+    }
+    a {
+        color: #28357a;
+        font-family: 'futuraNewBook Req';
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.red {
+    color: #dd1f26;
+}
+
+.blue {
+    color: #28357a;
+}
+
+.showNews {
+    text-align: center;
+    position: relative;
+    clear: both;
+
+    a {
+        // text-transform: uppercase;
+        color: #28357a;
+        font-family: 'futuraNewDemi Req';
+        background: #fff;
+        position: relative;
+        z-index: 3;
+        padding :0 20 / $fz * 1rem;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .lineGray{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 13 / $fz * 1rem ;
+        margin: 0;
+        z-index: 2;
+    }
 }
