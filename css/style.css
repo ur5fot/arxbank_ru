@@ -99,10 +99,10 @@ h1 {
 }
 
 h2 {
-  margin-top: 2.5rem;
   color: #253172;
   font-size: 1.05556rem;
-  padding-bottom: 1rem;
+  margin-top: 1.94444rem;
+  padding-bottom: 0.83333rem;
   border-bottom: #e8e8e8 solid 1px;
 }
 
@@ -118,12 +118,19 @@ article p {
   margin: 1.11111rem 0;
 }
 
-article a {
+a {
   color: #323232;
+  display: inline-block;
   text-decoration: none;
 }
-article a:hover, article a:focus {
+a:hover, a:focus {
   text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .spr-sprite, .minus, .minusRed, .activeSitebarLeft .minus, .close, .down, .evro, .insure, .logoMin, .point, .search, .tel, .up, .usd {
@@ -613,9 +620,9 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
 article {
   width: 73.33333%;
   float: left;
-  padding-top: 1.66667rem;
+  padding-top: 1.16667rem;
   padding-left: 5.69767%;
-  padding-bottom: 7.55556rem;
+  padding-bottom: 4.44444rem;
 }
 
 footer {
@@ -751,10 +758,20 @@ footer:after {
   font-family: 'futuraNewDemi Req';
 }
 
+.tabs {
+  margin-top: 1.83333rem;
+}
+.tabs .tabsTitle {
+  border-bottom: #e8e8e8 solid 1px;
+  margin-bottom: 0.83333rem;
+}
 .tabs .tabsTitle li {
   font-size: 1.27778rem;
+  line-height: 1.27778rem;
   display: inline-block;
   padding-right: 1.55556rem;
+  margin-top: 1.94444rem;
+  padding-bottom: 0.83333rem;
   font-family: 'futuraNewDemi Req';
 }
 .tabs .tabsTitle li:last-child {
@@ -763,8 +780,77 @@ footer:after {
 
 .tabs_container a {
   font-size: 0.83333rem;
+  line-height: 1.66667rem;
+  display: inline-block;
 }
 
 .activeTabs a {
   color: #dd1f26;
+}
+
+.dohodniVi {
+  font-family: 'futuraNewDemi Req';
+}
+.dohodniVi > tbody > tr {
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 0.88889rem;
+}
+.dohodniVi > tbody > tr:last-child {
+  border-bottom: none;
+}
+.dohodniVi > tbody > tr:first-child td {
+  font-size: 1.22222rem;
+}
+.dohodniVi th {
+  font-size: 0.83333rem;
+  line-height: 0.88889rem;
+  width: 36.32236%;
+  padding: 0.88889rem 0;
+  padding-right: 0.88889rem;
+}
+.dohodniVi td {
+  font-size: 0.77778rem;
+  line-height: 0.83333rem;
+  color: #000;
+  padding: 0.88889rem 0;
+}
+.dohodniVi table {
+  width: 100%;
+}
+.dohodniVi table thead {
+  font-family: 'futuraNewLiqht Req';
+}
+.dohodniVi table th {
+  width: auto;
+  color: #dd1f26;
+}
+.dohodniVi table td:first-child {
+  width: 26.80222%;
+}
+.dohodniVi table tr {
+  padding-left: .5rem;
+}
+
+.importantUp {
+  font-size: 1.05556rem;
+  font-family: 'futuraNewDemi Req';
+  margin: 2.66667rem 0;
+}
+
+.insurance {
+  font-size: 0.83333rem;
+  line-height: 1.11111rem;
+}
+.insurance:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.insurance img {
+  float: left;
+  margin-right: 0.88889rem;
+  margin-bottom: 0.88889rem;
 }

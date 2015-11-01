@@ -44,10 +44,10 @@ h1 {
 }
 
 h2 {
-    margin-top: 45 / $fz * 1rem;
     color: #253172;
     font-size: 19 / $fz * 1rem;
-    padding-bottom: 18 / $fz * 1rem;
+    margin-top: 35 / $fz * 1rem;
+    padding-bottom: 15 / $fz * 1rem;
     border-bottom: #e8e8e8 solid 1px;
 }
 
@@ -63,9 +63,15 @@ h2 {
     margin: (20 / $fz * 1rem)  0;
 }
 
-article a {
+ a {
 	color: #323232;
+	display: inline-block;
 	@include hover-link;
+}
+img{
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
    
