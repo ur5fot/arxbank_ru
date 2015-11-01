@@ -341,7 +341,7 @@
     height: 18 / $fz * 1rem;
     width: 27 / $fz * 1rem;
     left: 0;
-    bottom: 9 / $fz * 1rem;
+    bottom: 5 / $fz * 1rem;
 }
 
 .down, .up {
@@ -580,4 +580,36 @@ footer {
         margin-right: (16 / $fz * 1rem);
         margin-bottom: (16 / $fz * 1rem);
     }
+}
+
+// ark_template_chast.psd
+.linkRed {
+    margin-left: 0;
+    a {
+        color: #dd1f26;
+        font-size: 23 / $fz * 1rem;
+        line-height: 41 / $fz * 1rem;
+        font-family: 'futuraNewDemi Req';
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.footnote {
+    font-size: 15 / $fz * 1rem;
+    line-height: 20 / $fz * 1rem;
+}
+
+.importantBlue {
+    font-family: 'futuraNewDemi Req';
+    color: #232f6c;
+}
+
+// 
+.lineGray{
+    background: #e8e8e8;
+    height: 1px;
+    margin: (20 / $fz * 1rem) 0;
 }
