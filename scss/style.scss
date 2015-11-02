@@ -852,7 +852,53 @@ footer {
         }
         input {
             float: left;
-            width: 140 / $fz * 1rem
+            width: 140 / $fz * 1rem;
         }
+    }
+}
+
+//  ark_template_usl.html
+//  830 537 
+.width60p {
+    width: 60%;
+}
+
+.underline {
+    text-decoration: underline;
+    font-family: 'futuraNewDemi Req';
+    font-size: 17 / $fz * 1rem;
+}
+
+.officeAddress {
+    @include cf;
+    div {
+        &:first-of-type {
+            @include span(50% - 3%);
+            margin-left: gutters(6%);
+        }
+    }
+    div {
+        &:last-of-type {
+            @include span(50% - 3% last);
+        }
+    }
+    .officeAddressCity {
+        font-size: 21 / $fz * 1rem;
+        font-family: 'futuraNewDemi Req';
+    }
+    .officeAddressRegime {
+        font-size: 16 / $fz * 1rem;
+        font-family: 'futuraNewDemi Req';
+        margin: 0;
+    }
+    .officeAddressOpeningHours {
+        color: #6b6b6b;
+        font-size: 16 / $fz * 1rem;
+        margin-bottom: 20 / $fz * 1rem;
+    }
+    .officeAddressWeekend {
+        font-size: 19 / $fz * 1rem;
+        font-family: 'futuraNewDemi Req';
+        color: #e90404;
     }
 }
