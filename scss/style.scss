@@ -730,13 +730,13 @@ footer {
         color: #6b6b6b;
         p {
             font-size: 14 / $fz * 1rem;
-            line-height:  14 / $fz * 1rem;
+            line-height: 14 / $fz * 1rem;
             color: #323232;
             margin-top: 20/ $fz * 1rem;
             margin-bottom: 5/ $fz * 1rem;
-             &:first-child{
-            margin-top: 0;
-        }
+            &:first-child {
+                margin-top: 0;
+            }
         }
         &:first-of-type {
             margin-right: 16 / $fz * 1rem;
@@ -754,33 +754,105 @@ footer {
     width: 33px;
     display: inline-block;
 }
+
 // $wi: 186 /    $fz * 1rem;
-.form{
-    margin-top: 150  / $fz * 1rem ;
-    h2{
-        font-size: 36  / $fz * 1rem;
+.form {
+    margin-top: 150 / $fz * 1rem;
+    h2 {
+        font-size: 36 / $fz * 1rem;
         color: #323232;
         font-family: 'futuraNewDemi Req';
     }
-    form{
-    margin-top: 45  / $fz * 1rem;
-    display: block;
-    width: 100%;
-    label{
-        width: 100%;
-        font-family: 'futuraNewDemi Req';
-        font-size: 14  / $fz * 1rem;
-        height: 37 / $fz * 1rem;
-        line-height: 37 / $fz * 1rem ;
-        @include cf;
-    }
-    input , textarea{
-        width: calc(100% - #{190  /   $fz * 1rem});
-        float: right;
+    form {
+        margin-top: 45 / $fz * 1rem;
         display: block;
-        height: 37 / $fz * 1rem;
-        border: 1px solid #b1b1b1;
-        box-shadow: 0 0 (8 / $fz * 1rem) rgba(#000, .2);
+        width: 100%;
+        label {
+            width: 100%;
+            font-family: 'futuraNewDemi Req';
+            font-size: 14 / $fz * 1rem;
+            height: 37 / $fz * 1rem;
+            line-height: 37 / $fz * 1rem;
+            @include cf;
+        }
+        input, textarea {
+            width: calc(100% - #{190  /   $fz * 1rem});
+            float: right;
+            display: block;
+            height: 37 / $fz * 1rem;
+            line-height: 37 / $fz * 1rem;
+            border: 1px solid #b1b1b1;
+            box-shadow: 0 0 (8 / $fz * 1rem) rgba(#000, .2);
+            border-radius: 3/ $fz * 1rem;
+            padding: 0 (15/ $fz * 1rem);
+        }
     }
 }
+
+.btn {
+    font-size: 25 / $fz * 1rem;
+    color: #fff;
+    background: #df0000;
+    border-radius: 3/ $fz * 1rem;
+    display: table;
+    padding: (10/ $fz * 1rem) (23/ $fz * 1rem);
+    font-family: 'futuraNewDemi Req';
+    cursor: pointer;
+    margin-top: 40 / $fz * 1rem;
+    margin-left: 190 / $fz * 1rem;
+    &:hover {
+        background: lighten(#df0000, 10%);
+    }
+}
+
+// ark_template_zapros.psd
+.formInquiry {
+    @extend .form;
+    margin-top: 20 / $fz * 1rem;
+    .formInquirySub {
+        @include cf;
+        label {
+            display: block;
+            width: calc(100% - #{190  /   $fz * 1rem});
+            float: right;
+        }
+        input {
+            &:first-child {
+                // 353 601
+                width: 353 / 601 * 100%;
+                float: left;
+            }
+            &:last-child {
+                // 353 601
+                width: 194 / 601 * 100%;
+                float: right;
+            }
+        }
+    }
+    .formInquiryNote {
+        @include cf;
+        font-size: 14 / $fz * 1rem;
+        line-height: 37 / $fz * 1rem;
+        font-family: 'futuraNewDemi Req';
+        div {
+            &:first-child {
+                width: 190 / $fz * 1rem;
+                float: left;
+            }
+            &:last-child {
+                float: left;
+                color: #a3a3a3;
+                font-size: 14 / $fz * 1rem;
+                line-height: 37 / $fz * 1rem;
+                font-family: 'futuraNewBook Req';
+                margin-left: 20 / $fz * 1rem;
+            }
+            width: 190 / $fz * 1rem;
+            float: left;
+        }
+        input {
+            float: left;
+            width: 140 / $fz * 1rem
+        }
+    }
 }

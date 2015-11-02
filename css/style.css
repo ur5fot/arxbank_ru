@@ -1094,27 +1094,27 @@ footer:after {
   display: inline-block;
 }
 
-.form {
+.form, .formInquiry {
   margin-top: 8.33333rem;
 }
-.form h2 {
+.form h2, .formInquiry h2 {
   font-size: 2rem;
   color: #323232;
   font-family: 'futuraNewDemi Req';
 }
-.form form {
+.form form, .formInquiry form {
   margin-top: 2.5rem;
   display: block;
   width: 100%;
 }
-.form form label {
+.form form label, .formInquiry form label {
   width: 100%;
   font-family: 'futuraNewDemi Req';
   font-size: 0.77778rem;
   height: 2.05556rem;
   line-height: 2.05556rem;
 }
-.form form label:after {
+.form form label:after, .formInquiry form label:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -1122,11 +1122,88 @@ footer:after {
   overflow: hidden;
   visibility: hidden;
 }
-.form form input, .form form textarea {
+.form form input, .formInquiry form input, .form form textarea, .formInquiry form textarea {
   width: calc(100% - 10.55556rem);
   float: right;
   display: block;
   height: 2.05556rem;
+  line-height: 2.05556rem;
   border: 1px solid #b1b1b1;
   box-shadow: 0 0 0.44444rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.16667rem;
+  padding: 0 0.83333rem;
+}
+
+.btn {
+  font-size: 1.38889rem;
+  color: #fff;
+  background: #df0000;
+  border-radius: 0.16667rem;
+  display: table;
+  padding: 0.55556rem 1.27778rem;
+  font-family: 'futuraNewDemi Req';
+  cursor: pointer;
+  margin-top: 2.22222rem;
+  margin-left: 10.55556rem;
+}
+.btn:hover {
+  background: #ff1313;
+}
+
+.formInquiry {
+  margin-top: 1.11111rem;
+}
+.formInquiry .formInquirySub:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.formInquiry .formInquirySub label {
+  display: block;
+  width: calc(100% - 10.55556rem);
+  float: right;
+}
+.formInquiry .formInquirySub input:first-child {
+  width: 58.73544%;
+  float: left;
+}
+.formInquiry .formInquirySub input:last-child {
+  width: 32.27953%;
+  float: right;
+}
+.formInquiry .formInquiryNote {
+  font-size: 0.77778rem;
+  line-height: 2.05556rem;
+  font-family: 'futuraNewDemi Req';
+}
+.formInquiry .formInquiryNote:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.formInquiry .formInquiryNote div {
+  width: 10.55556rem;
+  float: left;
+}
+.formInquiry .formInquiryNote div:first-child {
+  width: 10.55556rem;
+  float: left;
+}
+.formInquiry .formInquiryNote div:last-child {
+  float: left;
+  color: #a3a3a3;
+  font-size: 0.77778rem;
+  line-height: 2.05556rem;
+  font-family: 'futuraNewBook Req';
+  margin-left: 1.11111rem;
+}
+.formInquiry .formInquiryNote input {
+  float: left;
+  width: 7.77778rem;
 }
