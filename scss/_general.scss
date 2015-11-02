@@ -61,7 +61,7 @@ a {
     @include hover-link;
 }
 
-img {
+img, iframe {
     display: block;
     max-width: 100%;
     height: auto;
@@ -74,8 +74,8 @@ article {
         margin-top: -10 / $fz * 1rem;
     }
     p {
-        margin-bottom: (20 / $fz * 1rem) ;
-        // margin-top: 0;
+        margin-bottom: (20 / $fz * 1rem);
+        // padding-top: 10 / $fz * 1rem;
     }
     span {
         color: #323232;
@@ -89,6 +89,7 @@ article {
         line-height: 19 / $fz * 1rem;
         // margin-top: 35 / $fz * 1rem;
         margin-bottom: 7 / $fz * 1rem;
+        padding-top: 10 / $fz * 1rem;
         // border-bottom: #e8e8e8 solid 1px;
     }
     h3 {
@@ -97,6 +98,7 @@ article {
         // margin-top: 35 / $fz * 1rem;
         margin-bottom: 7 / $fz * 1rem;
         // border-bottom: #e8e8e8 solid 1px;
+        padding-top: 10 / $fz * 1rem;
         font-family: 'futuraNewDemi Req';
     }
     h4 {
@@ -108,4 +110,27 @@ article {
 
 aside {
     padding-bottom: 80 / $fz * 1rem;
+}
+
+section {
+    @include cf;
+}
+
+address {
+    display: inline-block;
+    a {
+        color: #c41c21;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+a[href^="mailto"] {
+    color: #c41c21;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
 }

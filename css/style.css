@@ -114,7 +114,7 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-img {
+img, iframe {
   display: block;
   max-width: 100%;
   height: auto;
@@ -139,11 +139,13 @@ article h2 {
   font-size: 1.05556rem;
   line-height: 1.05556rem;
   margin-bottom: 0.38889rem;
+  padding-top: 0.55556rem;
 }
 article h3 {
   font-size: 1.27778rem;
   line-height: 1.27778rem;
   margin-bottom: 0.38889rem;
+  padding-top: 0.55556rem;
   font-family: 'futuraNewDemi Req';
 }
 article h4 {
@@ -156,8 +158,36 @@ aside {
   padding-bottom: 4.44444rem;
 }
 
-.spr-sprite, .minus, .minusRed, .activeSitebarLeft .minus, .close, .down, .evro, .insure, .logoMin, .point, .search, .tel, .up, .usd {
-  background-image: url('../img/spr-s31ec202de4.png');
+section:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+address {
+  display: inline-block;
+}
+address a {
+  color: #c41c21;
+  text-decoration: underline;
+}
+address a:hover {
+  text-decoration: none;
+}
+
+a[href^="mailto"] {
+  color: #c41c21;
+  text-decoration: underline;
+}
+a[href^="mailto"]:hover {
+  text-decoration: none;
+}
+
+.spr-sprite, .minus, .minusRed, .activeSitebarLeft .minus, .close, .down, .evro, .insure, .logoMin, .point, .search, .tel, .up, .usd, .times {
+  background-image: url('../img/spr-sfc4720babe.png');
   background-repeat: no-repeat;
 }
 
@@ -202,11 +232,15 @@ aside {
 }
 
 .up {
-  background-position: 0 -189px;
+  background-position: 0 -222px;
 }
 
 .usd {
-  background-position: 0 -198px;
+  background-position: 0 -231px;
+}
+
+.times {
+  background-position: 0 -189px;
 }
 
 .container {
@@ -838,16 +872,17 @@ footer:after {
 .dohodniVi > tbody > tr:first-child td {
   font-size: 1.22222rem;
 }
-.dohodniVi th {
+.dohodniVi > tbody > tr > th {
   font-size: 0.83333rem;
   line-height: 0.88889rem;
   width: 36.32236%;
   padding: 0.88889rem 0;
   padding-right: 0.88889rem;
+  font-family: 'futuraNewLiqht Req';
 }
-.dohodniVi td {
+.dohodniVi > tbody > tr > td {
   font-size: 0.77778rem;
-  line-height: 0.83333rem;
+  line-height: 0.77778rem;
   color: #000;
   padding: 0.88889rem 0;
 }
@@ -856,16 +891,26 @@ footer:after {
 }
 .dohodniVi table thead {
   font-family: 'futuraNewLiqht Req';
+  text-transform: uppercase;
+  font-size: 0.61111rem;
 }
 .dohodniVi table th {
   width: auto;
   color: #dd1f26;
+  font-family: 'futuraNewDemi Req';
+  font-size: 0.77778rem;
+  line-height: 0.77778rem;
+  padding: 0.55556rem 0;
 }
 .dohodniVi table td:first-child {
   width: 26.80222%;
 }
-.dohodniVi table tr {
-  padding-left: .5rem;
+.dohodniVi table td {
+  font-size: 0.77778rem;
+  line-height: 0.77778rem;
+  color: #000;
+  padding: 0.66667rem 0;
+  padding-right: 0.5rem;
 }
 
 .importantUp {
@@ -969,6 +1014,7 @@ footer:after {
   text-align: center;
   position: relative;
   clear: both;
+  margin-top: 2.72222rem;
 }
 .showNews a {
   color: #28357a;
@@ -989,4 +1035,98 @@ footer:after {
   top: 0.72222rem;
   margin: 0;
   z-index: 2;
+}
+
+.map {
+  width: 100%;
+  height: 20.16667rem;
+  border: 0;
+  border-top: 3px solid #b93236;
+}
+
+.addressLeft {
+  float: left;
+  width: 70.86331%;
+  padding-right: 1.11111rem;
+}
+
+.addressRight {
+  float: right;
+  width: 29.13669%;
+}
+.addressRight:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.addressRight p {
+  font-size: 0.88889rem;
+}
+.addressRight > div {
+  font-size: 0.66667rem;
+  color: #6b6b6b;
+}
+.addressRight > div p {
+  font-size: 0.77778rem;
+  line-height: 0.77778rem;
+  color: #323232;
+  margin-top: 1.11111rem;
+  margin-bottom: 0.27778rem;
+}
+.addressRight > div p:first-child {
+  margin-top: 0;
+}
+.addressRight > div:first-of-type {
+  margin-right: 0.88889rem;
+  float: left;
+}
+.addressRight > div:last-of-type {
+  float: right;
+  width: calc( 100% - (0.88889rem + 33px));
+}
+
+.times {
+  height: 33px;
+  width: 33px;
+  display: inline-block;
+}
+
+.form {
+  margin-top: 8.33333rem;
+}
+.form h2 {
+  font-size: 2rem;
+  color: #323232;
+  font-family: 'futuraNewDemi Req';
+}
+.form form {
+  margin-top: 2.5rem;
+  display: block;
+  width: 100%;
+}
+.form form label {
+  width: 100%;
+  font-family: 'futuraNewDemi Req';
+  font-size: 0.77778rem;
+  height: 2.05556rem;
+  line-height: 2.05556rem;
+}
+.form form label:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.form form input, .form form textarea {
+  width: calc(100% - 10.55556rem);
+  float: right;
+  display: block;
+  height: 2.05556rem;
+  border: 1px solid #b1b1b1;
+  box-shadow: 0 0 0.44444rem rgba(0, 0, 0, 0.2);
 }

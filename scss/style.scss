@@ -6,7 +6,7 @@
 @import "_var.scss";
 @import "_general.scss";
 @import "spr/*.png";
-@each $name in minus, minusRed, close, down, evro, insure, logoMin, point, search, tel, up, usd {
+@each $name in minus, minusRed, close, down, evro, insure, logoMin, point, search, tel, up, usd, times {
     .#{$name} {
         @include spr-sprite(#{$name});
     }
@@ -540,34 +540,48 @@ footer {
                 font-size: 22 / $fz * 1rem;
             }
         }
-    }
-    th {
-        font-size: 15 / $fz * 1rem;
-        line-height: 16 / $fz * 1rem;
-        width: 320 / 881 * 100%;
-        padding: (16 / $fz * 1rem) 0;
-        padding-right: 16 / $fz * 1rem;
-    }
-    td {
-        font-size: 14 / $fz * 1rem;
-        line-height: 15 / $fz * 1rem;
-        color: #000;
-        padding: (16 / $fz * 1rem) 0;
+        > th {
+            font-size: 15 / $fz * 1rem;
+            line-height: 16 / $fz * 1rem;
+            width: 320 / 881 * 100%;
+            padding: (16 / $fz * 1rem) 0;
+            padding-right: 16 / $fz * 1rem;
+            font-family: 'futuraNewLiqht Req';
+        }
+        > td {
+            font-size: 14 / $fz * 1rem;
+            line-height: 14 / $fz * 1rem;
+            color: #000;
+            padding: (16 / $fz * 1rem) 0;
+        }
     }
     table {
         width: 100%;
         thead {
             font-family: 'futuraNewLiqht Req';
+            text-transform: uppercase;
+            font-size: 11 / $fz * 1rem;
         }
         th {
             width: auto;
             color: #dd1f26;
+            font-family: 'futuraNewDemi Req';
+            font-size: 14 / $fz * 1rem;
+            line-height: 14 / $fz * 1rem;
+            padding: (10 / $fz * 1rem) 0;
         }
         td:first-child {
             width: 145 / 541 * 100%;
         }
         tr {
-            padding-left: .5rem;
+            // padding-left: .5rem;
+        }
+        td {
+            font-size: 14 / $fz * 1rem;
+            line-height: 14 / $fz * 1rem;
+            color: #000;
+            padding: (12 / $fz * 1rem) 0;
+            padding-right: 0.5rem;
         }
     }
 }
@@ -664,7 +678,7 @@ footer {
     text-align: center;
     position: relative;
     clear: both;
-
+    margin-top: 49 / $fz * 1rem;
     a {
         // text-transform: uppercase;
         color: #28357a;
@@ -672,18 +686,101 @@ footer {
         background: #fff;
         position: relative;
         z-index: 3;
-        padding :0 20 / $fz * 1rem;
+        padding: 0 20 / $fz * 1rem;
         text-decoration: underline;
         &:hover {
             text-decoration: none;
         }
     }
-    .lineGray{
+    .lineGray {
         position: absolute;
         left: 0;
         right: 0;
-        top: 13 / $fz * 1rem ;
+        top: 13 / $fz * 1rem;
         margin: 0;
         z-index: 2;
     }
+}
+
+// ark_template_cont.psd 
+//  591 834
+.map {
+    // height: auto;
+    width: 100%;
+    height: 363 / $fz * 1rem;
+    border: 0;
+    border-top: 3px solid #b93236;
+}
+
+.addressLeft {
+    float: left;
+    width: 591 / 834 *100%;
+    padding-right: 20 / $fz * 1rem;
+}
+
+.addressRight {
+    float: right;
+    width: 100 - (591 / 834 *100%);
+    @include cf;
+    p {
+        font-size: 16 / $fz * 1rem;
+    }
+    > div {
+        font-size: 12 / $fz * 1rem;
+        color: #6b6b6b;
+        p {
+            font-size: 14 / $fz * 1rem;
+            line-height:  14 / $fz * 1rem;
+            color: #323232;
+            margin-top: 20/ $fz * 1rem;
+            margin-bottom: 5/ $fz * 1rem;
+             &:first-child{
+            margin-top: 0;
+        }
+        }
+        &:first-of-type {
+            margin-right: 16 / $fz * 1rem;
+            float: left;
+        }
+        &:last-of-type {
+            float: right;
+            width: calc( 100% - (0.88889rem + 33px));
+        }
+    }
+}
+
+.times {
+    height: 33px;
+    width: 33px;
+    display: inline-block;
+}
+// $wi: 186 /    $fz * 1rem;
+.form{
+    margin-top: 150  / $fz * 1rem ;
+    h2{
+        font-size: 36  / $fz * 1rem;
+        color: #323232;
+        font-family: 'futuraNewDemi Req';
+    }
+    form{
+    margin-top: 45  / $fz * 1rem;
+    display: block;
+    width: 100%;
+    label{
+        width: 100%;
+        font-family: 'futuraNewDemi Req';
+        font-size: 14  / $fz * 1rem;
+        height: 37 / $fz * 1rem;
+        line-height: 37 / $fz * 1rem ;
+        @include cf;
+    }
+    input , textarea{
+        width: calc(100% - #{190  /   $fz * 1rem});
+        float: right;
+        display: block;
+        height: 37 / $fz * 1rem;
+        border: 1px solid #b1b1b1;
+        box-shadow: 0 0 (8 / $fz * 1rem) rgba(#000, .2);
+    }
+}
 }
