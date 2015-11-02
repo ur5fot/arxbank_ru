@@ -666,12 +666,14 @@ footer {
     }
 }
 
-.red {
+.newsRedH3 {
     color: #dd1f26;
+    padding-top: 0;
 }
 
-.blue {
+.newsBlueH3 {
     color: #28357a;
+    padding-top: 0;
 }
 
 .showNews {
@@ -680,7 +682,6 @@ footer {
     clear: both;
     margin-top: 49 / $fz * 1rem;
     a {
-        // text-transform: uppercase;
         color: #28357a;
         font-family: 'futuraNewDemi Req';
         background: #fff;
@@ -858,7 +859,6 @@ footer {
 }
 
 //  ark_template_usl.html
-//  830 537 
 .width60p {
     width: 60%;
 }
@@ -901,4 +901,18 @@ footer {
         font-family: 'futuraNewDemi Req';
         color: #e90404;
     }
+}
+
+// ark_template_news_new.psd
+.newTextBold {
+    color: #757575;
+    font-family: 'futuraNewDemi Req';
+    font-size: 15 / $fz * 1rem;
+}
+
+.newsNewH2Blue {
+    color: #28357a;
+    font-size: 16 / $fz * 1rem;
+    font-family: 'futuraNewDemi Req';
+    text-transform: uppercase;
 }
