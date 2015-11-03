@@ -22,6 +22,10 @@
     font-family: 'futuraNewBook Req';
     src: url('../fonts/FuturaNewBook.otf');
 }
+@font-face {
+    font-family: 'futuraNewHeavy Req';
+    src: url('../fonts/FuturaNewHeavy.otf');
+}
 
 * {
     box-sizing: border-box;
@@ -67,7 +71,7 @@ img, iframe {
     height: auto;
 }
 
-article {
+section {
     ul {
         line-height: 30 / $fz * 1rem;
         margin-left: 20 / $fz * 1rem;
@@ -132,5 +136,11 @@ a[href^="mailto"] {
     text-decoration: underline;
     &:hover {
         text-decoration: none;
+    }
+}
+.textCenter{
+    text-align: center;
+    h1, h2, h3, h4, p, span,{
+        text-align: center;
     }
 }

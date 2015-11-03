@@ -74,6 +74,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-family: 'futuraNewBook Req';
   src: url("../fonts/FuturaNewBook.otf");
 }
+@font-face {
+  font-family: 'futuraNewHeavy Req';
+  src: url("../fonts/FuturaNewHeavy.otf");
+}
 * {
   box-sizing: border-box;
 }
@@ -120,35 +124,35 @@ img, iframe {
   height: auto;
 }
 
-article ul {
+section ul {
   line-height: 1.66667rem;
   margin-left: 1.11111rem;
   margin-top: -0.55556rem;
 }
-article p {
+section p {
   margin-bottom: 1.11111rem;
 }
-article span {
+section span {
   color: #323232;
   font-size: 1rem;
   line-height: 1.3;
   font-family: 'futuraNewDemi Req';
 }
-article h2 {
+section h2 {
   color: #253172;
   font-size: 1.05556rem;
   line-height: 1.05556rem;
   margin-bottom: 0.38889rem;
   padding-top: 0.55556rem;
 }
-article h3 {
+section h3 {
   font-size: 1.27778rem;
   line-height: 1.27778rem;
   margin-bottom: 0.38889rem;
   padding-top: 0.55556rem;
   font-family: 'futuraNewDemi Req';
 }
-article h4 {
+section h4 {
   font-size: 1.27778rem;
   line-height: 1.27778rem;
   margin: 1.11111rem 0;
@@ -186,61 +190,80 @@ a[href^="mailto"]:hover {
   text-decoration: none;
 }
 
-.spr-sprite, .minus, .minusRed, .activeSitebarLeft .minus, .close, .down, .evro, .insure, .logoMin, .point, .search, .tel, .up, .usd, .times {
-  background-image: url('../img/spr-sfc4720babe.png');
+.textCenter {
+  text-align: center;
+}
+.textCenter h1, .textCenter h2, .textCenter h3, .textCenter h4, .textCenter p, .textCenter span {
+  text-align: center;
+}
+
+.spr-sprite, .minus, .minusRed, .activeSitebarLeft .minus, .close, .down, .evro, .insure, .logoMin, .point, .search, .tel, .up, .usd, .times, .bannerContribution, .bannerIcon, .bannerInsureMax {
+  background-image: url('../img/spr-s392899559e.png');
   background-repeat: no-repeat;
 }
 
 .minus {
-  background-position: 0 -96px;
+  background-position: 0 -414px;
 }
 
 .minusRed, .activeSitebarLeft .minus {
-  background-position: 0 -97px;
+  background-position: 0 -415px;
 }
 
 .close {
-  background-position: 0 0;
+  background-position: 0 -318px;
 }
 
 .down {
-  background-position: 0 -13px;
+  background-position: 0 -331px;
 }
 
 .evro {
-  background-position: 0 -22px;
+  background-position: 0 -340px;
 }
 
 .insure {
-  background-position: 0 -40px;
+  background-position: 0 -358px;
 }
 
 .logoMin {
-  background-position: 0 -70px;
+  background-position: 0 -388px;
 }
 
 .point {
-  background-position: 0 -98px;
+  background-position: 0 -416px;
 }
 
 .search {
-  background-position: 0 -104px;
+  background-position: 0 -422px;
 }
 
 .tel {
-  background-position: 0 -119px;
+  background-position: 0 -437px;
 }
 
 .up {
-  background-position: 0 -222px;
+  background-position: 0 -540px;
 }
 
 .usd {
-  background-position: 0 -231px;
+  background-position: 0 -549px;
 }
 
 .times {
-  background-position: 0 -189px;
+  background-position: 0 -507px;
+}
+
+.bannerContribution {
+  background-position: 0 0;
+}
+
+.bannerIcon {
+  background-position: 0 -225px;
+}
+
+.bannerInsureMax {
+  background-position: 0 -289px;
 }
 
 .container {
@@ -613,11 +636,14 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   overflow: hidden;
   visibility: hidden;
 }
-.currency p {
+.currency h3 {
   font-size: 0.88889rem;
   color: #333366;
   margin: 0;
-  font-family: 'futuraNewBook Req';
+  background: #fff;
+  font-family: 'futuraNewDemi Req';
+  display: inline-block;
+  padding-right: 0.55556rem;
 }
 .currency span {
   font-size: 0.61111rem;
@@ -672,9 +698,7 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
 .lineBlue {
   height: 2px;
   background: #333366;
-  width: calc(100% - 8.7rem);
   margin-top: -0.55556rem;
-  float: right;
 }
 
 article {
@@ -691,6 +715,10 @@ article:after {
   clear: both;
   overflow: hidden;
   visibility: hidden;
+}
+article .currency:first-child {
+  margin-top: 0;
+  margin-bottom: 1.94444rem;
 }
 
 footer {
@@ -1030,6 +1058,18 @@ footer:after {
 .showNews a:hover {
   text-decoration: none;
 }
+.showNews h3 {
+  font-size: 1.22222rem;
+  color: #28357a;
+  font-family: 'futuraNewHeavy Req';
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  padding: 0 1.11111rem;
+  z-index: 3;
+  text-transform: uppercase;
+  margin-bottom: 3.33333rem;
+}
 .showNews .lineGray {
   position: absolute;
   left: 0;
@@ -1269,4 +1309,163 @@ footer:after {
   font-size: 0.88889rem;
   font-family: 'futuraNewDemi Req';
   text-transform: uppercase;
+}
+
+.banner {
+  width: 100%;
+  background: #f0f1f6;
+  box-shadow: 0 0.16667rem 1px #e0e0e0;
+  margin-top: 1.11111rem;
+  margin-bottom: 2.77778rem;
+}
+.banner:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.bannerLeft {
+  width: 62.5%;
+  float: left;
+  padding-top: 1.44444rem;
+  padding-left: 1.44444rem;
+}
+.bannerLeft h1 {
+  font-family: 'futuraNewBold Req';
+  font-size: 4.5rem;
+  line-height: 2.33333rem;
+  color: #262262;
+}
+.bannerLeft p {
+  font-family: 'futuraNewBold Req';
+  font-size: 2.55556rem;
+  margin-bottom: 2.44444rem;
+  color: #262262;
+}
+.bannerLeft a {
+  font-size: 0.88889rem;
+  color: #262262;
+  font-family: 'futuraNewDemi Req';
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.bannerLeft a:hover {
+  text-decoration: none;
+}
+
+.bannerInsureMax {
+  width: 449px;
+  height: 29px;
+  display: block;
+}
+
+.bannerContribution {
+  float: right;
+  display: block;
+  width: 441px;
+  height: 225px;
+  margin-top: 0.83333rem;
+}
+
+.banerContainer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.banerFooter {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.banerFooter:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.bannerIcon {
+  width: 892px;
+  height: 64px;
+  display: inline-block;
+  margin: 0.83333rem 0;
+}
+
+.bannerLine {
+  width: 100%;
+  height: 2px;
+  background: #e2e4ed;
+  clear: right;
+  position: relative;
+  z-index: 1;
+  margin-top: 0.55556rem;
+}
+
+.indexFooter {
+  color: #262626;
+  font-family: 'futuraNewBold Req';
+  margin-bottom: 2.77778rem;
+}
+.indexFooter:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.indexFooter h4 {
+  margin-bottom: 1.66667rem;
+  font-size: 1.27778rem;
+  text-transform: uppercase;
+}
+.indexFooter ul {
+  margin-left: 1.11111rem;
+}
+.indexFooter .indexFooterSpan {
+  width: 20%;
+  float: left;
+  padding: 0 0.27778rem;
+}
+.indexFooter .indexFooterSpan:nth-of-type(1) h4, .indexFooter .indexFooterSpan:nth-of-type(1) span, .indexFooter .indexFooterSpan:nth-of-type(5) h4, .indexFooter .indexFooterSpan:nth-of-type(5) span {
+  color: #dd1f26;
+}
+.indexFooter .indexFooterSpan:nth-of-type(1) .indexFooterOf, .indexFooter .indexFooterSpan:nth-of-type(5) .indexFooterOf {
+  color: #b0b0b0;
+  font-size: 0.55556rem;
+}
+.indexFooter .indexFooterSpan:nth-of-type(2) h4, .indexFooter .indexFooterSpan:nth-of-type(2) span, .indexFooter .indexFooterSpan:nth-of-type(4) h4, .indexFooter .indexFooterSpan:nth-of-type(4) span {
+  color: #28357a;
+}
+.indexFooter .indexFooterSpan:nth-of-type(2) .indexFooterOf, .indexFooter .indexFooterSpan:nth-of-type(4) .indexFooterOf {
+  color: #b0b0b0;
+  font-size: 0.55556rem;
+}
+.indexFooter .indexFooterSpan:nth-of-type(3) {
+  color: #b0b0b0;
+}
+.indexFooter .indexFooterSpan:nth-of-type(3) h4, .indexFooter .indexFooterSpan:nth-of-type(3) span {
+  color: #1e1e1e;
+}
+.indexFooter .indexFooterSpan:nth-of-type(3) .indexFooterOf {
+  color: #b0b0b0;
+  font-size: 0.55556rem;
+}
+
+.indexFooterContainer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
 }

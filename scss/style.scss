@@ -6,7 +6,7 @@
 @import "_var.scss";
 @import "_general.scss";
 @import "spr/*.png";
-@each $name in minus, minusRed, close, down, evro, insure, logoMin, point, search, tel, up, usd, times {
+@each $name in minus, minusRed, close, down, evro, insure, logoMin, point, search, tel, up, usd, times, bannerContribution, bannerIcon, bannerInsureMax {
     .#{$name} {
         @include spr-sprite(#{$name});
     }
@@ -299,11 +299,15 @@
         margin-top: 25 / $fz * 1rem;
     }
     @include cf;
-    p {
+    h3 {
         font-size: 16 / $fz * 1rem;
         color: #333366;
         margin: 0;
-        font-family: 'futuraNewBook Req';
+        // margin-bottom: 10  / $fz * 1rem;
+        background: #fff;
+        font-family: 'futuraNewDemi Req';
+        display: inline-block;
+        padding-right: 10 / $fz * 1rem;
     }
     span {
         font-size: 11 / $fz * 1rem;
@@ -359,10 +363,10 @@
 .lineBlue {
     height: 2px;
     background: #333366;
-    $lb: (180 / $fz * 1rem);
-    width: calc(100% - 8.7rem);
+    // $lb: (180 / $fz * 1rem);
+    // width: calc(100% - 8.7rem);
     margin-top: -10 / $fz * 1rem;
-    float: right;
+    // float: right;
 }
 
 article {
@@ -371,6 +375,12 @@ article {
     padding-left: 49 / 860 * 100%;
     padding-bottom: 80 / $fz * 1rem;
     @include cf;
+    .currency {
+        &:first-child {
+            margin-top: 0;
+            margin-bottom: 35 / $fz * 1rem;
+        }
+    }
 }
 
 footer {
@@ -693,6 +703,19 @@ footer {
             text-decoration: none;
         }
     }
+    h3 {
+        font-size: 22 / $fz * 1rem;
+        color: #28357a;
+        font-family: 'futuraNewHeavy Req';
+        background: #fff;
+        position: relative;
+        display: inline-block;
+        padding: 0 20 / $fz * 1rem;
+        z-index: 3;
+        // margin: 40 / $fz * 1rem 0;
+        text-transform: uppercase;
+        margin-bottom: 60 / $fz * 1rem;
+    }
     .lineGray {
         position: absolute;
         left: 0;
@@ -916,3 +939,141 @@ footer {
     font-family: 'futuraNewDemi Req';
     text-transform: uppercase;
 }
+
+//  ark
+// 1184  740
+.banner {
+    // height: 355 / $fz * 1rem;
+    width: 100%;
+    background: #f0f1f6;
+    box-shadow: 0 3/ $fz * 1rem 1px #e0e0e0;
+    margin-top: (20 / $fz * 1rem);
+    margin-bottom: (50 / $fz * 1rem);
+    @include cf;
+}
+
+.bannerLeft {
+    width: 740 /1184 *100%;
+    float: left;
+    padding-top: 26 / $fz * 1rem;
+    padding-left: 26 / $fz * 1rem;
+    h1 {
+        font-family: 'futuraNewBold Req';
+        font-size: 81 / $fz * 1rem;
+        line-height: 42 / $fz * 1rem;
+        color: #262262;
+    }
+    p {
+        font-family: 'futuraNewBold Req';
+        font-size: 46 / $fz * 1rem;
+        margin-bottom: 44 / $fz * 1rem;
+        color: #262262;
+        // line-height: 42 / $fz * 1rem;
+    }
+    a {
+        font-size: 16 / $fz * 1rem;
+        color: #262262;
+        font-family: 'futuraNewDemi Req';
+        text-decoration: underline;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.bannerInsureMax {
+    width: 449px;
+    height: 29px;
+    display: block;
+}
+
+.bannerContribution {
+    float: right;
+    display: block;
+    width: 441px;
+    height: 225px;
+    margin-top: 15 / $fz * 1rem;
+}
+
+.banerContainer {
+    @include cf;
+}
+
+.banerFooter {
+    width: 100%;
+    display: block;
+    @include cf;
+    text-align: center;
+}
+
+.bannerIcon {
+    width: 892px;
+    height: 64px;
+    display: inline-block;
+    margin: 15 / $fz * 1rem 0;
+}
+
+.bannerLine {
+    width: 100%;
+    height: 2px;
+    background: #e2e4ed;
+    clear: right;
+    position: relative;
+    z-index: 1;
+    margin-top: 10 / $fz * 1rem;
+}
+
+.indexFooter {
+    color: #262626;
+    font-family: 'futuraNewBold Req';
+    @include cf;
+    margin-bottom: 50 / $fz * 1rem;
+    h4 {
+        margin-bottom: 30 / $fz * 1rem;
+        font-size: 23 / $fz * 1rem;
+        text-transform: uppercase;
+    }
+    ul {
+        margin-left: 20 / $fz * 1rem;
+    }
+    .indexFooterSpan {
+        @include span( 1 of 5);
+        padding: 0 5 / $fz * 1rem;
+        &:nth-of-type(1), &:nth-of-type(5) {
+            h4, span {
+                color: #dd1f26;
+            }
+            .indexFooterOf {
+                color: #b0b0b0;
+                font-size: 10 / $fz * 1rem;
+            }
+        }
+        &:nth-of-type(2), &:nth-of-type(4) {
+            h4, span {
+                color: #28357a;
+            }
+            .indexFooterOf {
+                color: #b0b0b0;
+                font-size: 10 / $fz * 1rem;
+            }
+        }
+        &:nth-of-type(3) {
+            color: #b0b0b0;
+            h4, span {
+                color: #1e1e1e;
+            }
+            .indexFooterOf {
+                color: #b0b0b0;
+                font-size: 10 / $fz * 1rem;
+            }
+        }
+    }
+}
+
+.indexFooterContainer {
+    @include cf;
+}
+
+// font-size: 23 / $fz * 1rem;
+// font-family: 'futuraNewBold Req';
